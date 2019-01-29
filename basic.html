@@ -1,0 +1,112 @@
+<!-- Unit 17 | Assignment - Visualizing Earthquakes Data with Leaflet: Basic page  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- All meta tags should be first in the header-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of dashboard-->
+  <title>Visualizing Earthquakes Data with Leaflet</title>
+
+  <!-- d3 for geojson call -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.12.2/d3.js"></script>
+
+  <!-- leaflet cdn -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+    crossorigin=""></script>
+  <!-- Bootstrap links -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+  crossorigin="anonymous">
+<!--The following uses data URI and can be used to avoid fake favicon requests:-->
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+<!-- css Style Scripts-->
+<!-- Our CSS -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- navbar: A horizontal bar,top of a web page, offering a number of links to help the viewer to navigate the web site. Origin: Shortening of navigation bar. -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark static-top">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo.png" width="10%" class="img-responsive asset_images" ml-auto alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="basic.html"><i class="fas fa-map-marked"></i> Basic Map </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="heat.html"> <i class="fas fa-map-marked"></i> Heat Map </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cluster.html"> <i class="fas fa-map-marked"></i> Cluster Map </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="time.html"> <i class="fas fa-map-marked"></i> Time Animation Map </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End of the Navigation bar-->
+  <!-- Title -->
+  <div class="wrapper ">
+    <div class="jumbotron">
+      <h1> Earthquakes and Fault Lines </h1>
+      <h2><strong><i class="fas fa-globe-americas"></i> United States Geological Survey</strong></h2>
+      <p>...Visualize an Earthquake Data set...</p>
+    </div>
+    <!-- End of Title -->
+    <div class="container">
+
+      <!-- main body -->
+      <div class="row margin-top-30">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+          <h4> Earthquakes over past day</h4>
+          <p>
+            Markers reflect the magnitude of the earthquake in their size and color. Earthquakes with higher magnitudes
+            appears as larger and darker in color.
+            <br>
+            Click the marker for additional information about the earthquake.
+          </p>
+          <div id="map" class="highlight">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End of Main container-->
+    <footer>
+      <!-- Copyright -->
+      <p>
+        Visualizing Earthquakes Data with Leaflet | <i class="far fa-copyright"></i> Copyright 2019: Minal Jajoo
+      </p>
+    </footer>
+
+  </div>
+
+
+  <!-- API key -->
+  <script type="text/javascript" src="assets/js/config.js"></script>
+  <!-- Our JS -->
+
+  <script type="text/javascript" src="assets/js/logic_basic.js"></script>
+
+</body>
+
+</html>
+<!------------ End of HTML ---------------->
